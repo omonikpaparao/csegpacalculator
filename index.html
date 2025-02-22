@@ -1,0 +1,957 @@
+<html>
+    <meta name="viewport"/>
+    <head>
+        <title>RVR&JC CSE GPA Calculator</title>
+        <style>
+            .c{
+                width:30%;
+            }
+            #count{
+                position:absolute;
+                top:0%;
+                left:77%;
+            }
+            #one{
+                display:none;
+                z-index:0;
+                height:390px;
+                width:150px;
+                border:3px solid black;
+                border-radius:10px;
+                background-color:bisque;
+                text-align: center;
+                position: absolute;
+                left:30%;
+            }
+            #two{
+                display:none;
+                z-index:1;
+                height:430px;
+                width:150px;
+                border:3px solid black;
+                border-radius:10px;
+                background-color:bisque;
+                text-align: center;
+                position: absolute;
+                left:30%;
+            }
+            #three{
+                text-align: center;
+                display:none;
+                z-index:2;
+                height:430px;
+                width:150px;
+                border:3px solid black;
+                border-radius:10px;
+                background-color:bisque;
+                position: absolute;
+                left:30%;
+            }
+            #four{
+                text-align: center;
+                display:none;
+                z-index:3;
+                height:430px;
+                width:150px;
+                border:3px solid black;
+                border-radius:10px;
+                background-color:bisque;
+                position: absolute;
+                left:30%;
+            }
+            #five{
+                text-align: center;
+                position:relative;
+                display:none;
+                z-index:4;
+                height:430px;
+                width:150px;
+                border:3px solid black;
+                border-radius:10px;
+                background-color:bisque;
+                position: absolute;
+                left:30%;
+            }
+            #six{
+                text-align: center;
+                display:none;
+                z-index:5;
+                height:430px;
+                width:150px;
+                border:3px solid black;
+                border-radius:10px;
+                background-color:bisque;
+                position: absolute;
+                left:30%;
+            }
+            #seven{
+                text-align: center;
+                display:none;
+                z-index:6;
+                height:390px;
+                width:150px;
+                border:3px solid black;
+                border-radius:10px;
+                background-color:bisque;
+                position: absolute;
+                left:30%;
+            }
+            #eight{
+                text-align: center;
+                display:none;
+                z-index:4;
+                height:150px;
+                width:150px;
+                border:3px solid black;
+                border-radius:10px;
+                background-color:bisque;
+                position: absolute;
+                left:30%;
+            }
+            body{
+                text-align: center;
+                background-image: url('https://i.pinimg.com/736x/58/d6/32/58d6328acf436c2908be16581d6c686e.jpg');
+                background-size: 100% 100 100%;
+                background-size: cover;
+                zoom:150%;
+            }
+            #subm{
+                background-color:tomato;
+                color:white;
+                border:2px solid orangered;
+                border-radius:20px;
+            }
+            #img1{
+                position:absolute;
+                top:180%;
+                left:-200px;
+                border:5px solid black;
+                border-radius: 20px;
+            }
+            marquee{
+                background-color:white;
+            }
+            #sem{
+                height:40px;
+                width:200px;
+            }
+        </style>
+        
+    </head><br><br>
+    <marquee><h2>This Calculator is for only CSE Department</h2></marquee>
+    <br><br><br>
+    <form onsubmit="cal()" style="position:absolute;left:250px;">
+    <body><left>
+        <br><br><br><br><br><br>
+        <b><font size="5px">Select Semester for SGPA:</font></b>
+        <select id="sem">
+            <option>-------------------</option>
+            <option value="1">Sem-1</option>
+            <option value="2">Sem-2</option>
+            <option value="3">Sem-3</option>
+            <option value="4">Sem-4</option>
+            <option value="5">Sem-5</option>
+            <option value="6">Sem-6</option>
+            <option value="7">Sem-7</option>
+            <option value="8">Sem-8</option>
+        </select><br><br>
+        <img src="https://images.shiksha.com/mediadata/images/1640621600phpSNtWu8.jpeg" id="img1">
+        <div id="one">
+            <h4>Semester-1</h4>
+                Subject-1:&nbsp;&nbsp;&nbsp;
+                <select id="sub11">
+                <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                </select><br><hr>
+                Subject-2:&nbsp;&nbsp;&nbsp;
+                <select id="sub12">
+                    <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                    </select><br><hr>
+                    Subject-3:&nbsp;&nbsp;&nbsp;
+                    <select id="sub13">
+                        <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                        </select><br><hr>
+                        Subject-4:&nbsp;&nbsp;&nbsp;
+                        <select id="sub14">
+                            <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                            </select><br><hr>
+                            Subject-5:&nbsp;&nbsp;&nbsp;
+                            <select id="sub15">
+                                <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                                </select><br><hr>
+                                Subject-6:&nbsp;&nbsp;&nbsp;
+                                <select id="sub16">
+                                    <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                                    
+                                    </select><br><hr>
+                                    Subject-7:&nbsp;&nbsp;&nbsp;
+                                    <select id="sub17">
+                                        <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                                        </select><br><hr>
+                                        Subject-8:&nbsp;&nbsp;&nbsp;
+                                        <select id="sub18">
+                                            <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                                            </select><br><br>
+                                            <input type="submit" id="subm">
+        </div>
+        <div id="two">
+            <h4>Semester-2</h4>
+            Subject-1:&nbsp;&nbsp;&nbsp;
+            <select id="sub21">
+            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+            </select><br><hr>
+            Subject-2:&nbsp;&nbsp;&nbsp;
+            <select id="sub22">
+                <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                </select><br><hr>
+                Subject-3:&nbsp;&nbsp;&nbsp;
+                <select id="sub23">
+                    <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                    </select><br><hr>
+                    Subject-4:&nbsp;&nbsp;&nbsp;
+                    <select id="sub24">
+                        <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                        </select><br><hr>
+                        Subject-5:&nbsp;&nbsp;&nbsp;
+                        <select id="sub25">
+                            <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                            </select><br><hr>
+                            Subject-6:&nbsp;&nbsp;&nbsp;
+                            <select id="sub26">
+                                <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                                </select><br><hr>
+                                Subject-7:&nbsp;&nbsp;&nbsp;
+                                <select id="sub27">
+                                    <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                                    </select><br><hr>
+                                    Subject-8:&nbsp;&nbsp;&nbsp;
+                                    <select id="sub28">
+                                        <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                                        </select><br><hr>
+                                        Subject-9:&nbsp;&nbsp;&nbsp;
+                                        <select id="sub29">
+                                            <option value="10">A+</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+                    <option value="0">F</option>
+                                            </select><br><br>
+                                        <input type="submit" id="subm">
+    </div>
+    <div id="three">
+        <h4>Semester-3</h4>
+        Subject-1:&nbsp;&nbsp;&nbsp;
+        <select id="sub31">
+        <option value="10">A+</option>
+        <option value="9">A</option>
+        <option value="8">B</option>
+        <option value="7">C</option>
+        <option value="6">D</option>
+        <option value="5">E</option>
+        <option value="0">F</option>
+        </select><br><hr>
+        Subject-2:&nbsp;&nbsp;&nbsp;
+        <select id="sub32">
+            <option value="10">A+</option>
+        <option value="9">A</option>
+        <option value="8">B</option>
+        <option value="7">C</option>
+        <option value="6">D</option>
+        <option value="5">E</option>
+        <option value="0">F</option>
+            </select><br><hr>
+            Subject-3:&nbsp;&nbsp;&nbsp;
+            <select id="sub33">
+                <option value="10">A+</option>
+        <option value="9">A</option>
+        <option value="8">B</option>
+        <option value="7">C</option>
+        <option value="6">D</option>
+        <option value="5">E</option>
+        <option value="0">F</option>
+                </select><br><hr>
+                Subject-4:&nbsp;&nbsp;&nbsp;
+                <select id="sub34">
+                    <option value="10">A+</option>
+        <option value="9">A</option>
+        <option value="8">B</option>
+        <option value="7">C</option>
+        <option value="6">D</option>
+        <option value="5">E</option>
+        <option value="0">F</option>
+                    </select><br><hr>
+                    Subject-5:&nbsp;&nbsp;&nbsp;
+                    <select id="sub35">
+                        <option value="10">A+</option>
+        <option value="9">A</option>
+        <option value="8">B</option>
+        <option value="7">C</option>
+        <option value="6">D</option>
+        <option value="5">E</option>
+        <option value="0">F</option>
+                        </select><br><hr>
+                        Subject-6:&nbsp;&nbsp;&nbsp;
+                        <select id="sub36">
+                            <option value="10">A+</option>
+        <option value="9">A</option>
+        <option value="8">B</option>
+        <option value="7">C</option>
+        <option value="6">D</option>
+        <option value="5">E</option>
+        <option value="0">F</option>
+                            </select><br><hr>
+                            Subject-7:&nbsp;&nbsp;&nbsp;
+                            <select id="sub37">
+                                <option value="10">A+</option>
+        <option value="9">A</option>
+        <option value="8">B</option>
+        <option value="7">C</option>
+        <option value="6">D</option>
+        <option value="5">E</option>
+        <option value="0">F</option>
+                                </select><br><hr>
+                                Subject-8:&nbsp;&nbsp;&nbsp;
+                                <select id="sub38">
+                                    <option value="10">A+</option>
+        <option value="9">A</option>
+        <option value="8">B</option>
+        <option value="7">C</option>
+        <option value="6">D</option>
+        <option value="5">E</option>
+        <option value="0">F</option>
+                                    </select><br><hr>
+                                    Subject-9:&nbsp;&nbsp;&nbsp;
+                                    <select id="sub39">
+                                        <option value="10">A+</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
+                                        </select><br><br>
+                                    <input type="submit" id="subm">
+</div>
+<div id="four">
+    <h4>Semester-4</h4>
+    Subject-1:&nbsp;&nbsp;&nbsp;
+    <select id="sub41">
+    <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+    </select><br><hr>
+    Subject-2:&nbsp;&nbsp;&nbsp;
+    <select id="sub42">
+        <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+        </select><br><hr>
+        Subject-3:&nbsp;&nbsp;&nbsp;
+        <select id="sub43">
+            <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+            </select><br><hr>
+            Subject-4:&nbsp;&nbsp;&nbsp;
+            <select id="sub44">
+                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                </select><br><hr>
+                Subject-5:&nbsp;&nbsp;&nbsp;
+                <select id="sub45">
+                    <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                    </select><br><hr>
+                    Subject-6:&nbsp;&nbsp;&nbsp;
+                    <select id="sub46">
+                        <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                        </select><br><hr>
+                        Subject-7:&nbsp;&nbsp;&nbsp;
+                        <select id="sub47">
+                            <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                            </select><br><hr>
+                            Subject-8:&nbsp;&nbsp;&nbsp;
+                            <select id="sub48">
+                                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                                </select><br><hr>
+                                Subject-9:&nbsp;&nbsp;&nbsp;
+                                <select id="sub49">
+                                    <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                                    </select><br><br>
+                                <input type="submit" id="subm">
+</div>
+<div id="five">
+    <h4>Semester-5</h4>
+    Subject-1:&nbsp;&nbsp;&nbsp;
+    <select id="sub51">
+    <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+    </select><br><hr>
+    Subject-2:&nbsp;&nbsp;&nbsp;
+    <select id="sub52">
+        <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+        </select><br><hr>
+        Subject-3:&nbsp;&nbsp;&nbsp;
+        <select id="sub53">
+            <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+            </select><br><hr>
+            Subject-4:&nbsp;&nbsp;&nbsp;
+            <select id="sub54">
+                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                </select><br><hr>
+                Subject-5:&nbsp;&nbsp;&nbsp;
+                <select id="sub55">
+                    <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                    </select><br><hr>
+                    Subject-6:&nbsp;&nbsp;&nbsp;
+                    <select id="sub56">
+                        <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                        </select><br><hr>
+                        Subject-7:&nbsp;&nbsp;&nbsp;
+                        <select id="sub57">
+                            <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                            </select><br><hr>
+                            Subject-8:&nbsp;&nbsp;&nbsp;
+                            <select id="sub58">
+                                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                                </select><br><hr>
+                                Subject-9:&nbsp;&nbsp;&nbsp;
+                                <select id="sub59">
+                                    <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                                    </select><br><br>
+                                <input type="submit" id="subm">
+</div>
+<div id="six">
+    <h4>Semester-6</h4>
+    Subject-1:&nbsp;&nbsp;&nbsp;
+    <select id="sub61">
+    <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+    </select><br><hr>
+    Subject-2:&nbsp;&nbsp;&nbsp;
+    <select id="sub62">
+        <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+        </select><br><hr>
+        Subject-3:&nbsp;&nbsp;&nbsp;
+        <select id="sub63">
+            <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+            </select><br><hr>
+            Subject-4:&nbsp;&nbsp;&nbsp;
+            <select id="sub64">
+                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                </select><br><hr>
+                Subject-5:&nbsp;&nbsp;&nbsp;
+                <select id="sub65">
+                    <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                    </select><br><hr>
+                    Subject-6:&nbsp;&nbsp;&nbsp;
+                    <select id="sub66">
+                        <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                        </select><br><hr>
+                        Subject-7:&nbsp;&nbsp;&nbsp;
+                        <select id="sub67">
+                            <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                            </select><br><hr>
+                            Subject-8:&nbsp;&nbsp;&nbsp;
+                            <select id="sub68">
+                                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                                </select><br><hr>
+                                Subject-9:&nbsp;&nbsp;&nbsp;
+                                <select id="sub69">
+                                    <option value="10">A+</option>
+            <option value="9">A</option>
+            <option value="8">B</option>
+            <option value="7">C</option>
+            <option value="6">D</option>
+            <option value="5">E</option>
+            <option value="0">F</option>
+                                    </select><br><br>
+                                <input type="submit" id="subm">
+</div>
+<div id="seven">
+    <h4>Semester-7</h4>
+    Subject-1:&nbsp;&nbsp;&nbsp;
+    <select id="sub71">
+    <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+    </select><br><hr>
+    Subject-2:&nbsp;&nbsp;&nbsp;
+    <select id="sub72">
+        <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+        </select><br><hr>
+        Subject-3:&nbsp;&nbsp;&nbsp;
+        <select id="sub73">
+            <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+            </select><br><hr>
+            Subject-4:&nbsp;&nbsp;&nbsp;
+            <select id="sub74">
+                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                </select><br><hr>
+                Subject-5:&nbsp;&nbsp;&nbsp;
+                <select id="sub75">
+                    <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                    </select><br><hr>
+                    Subject-6:&nbsp;&nbsp;&nbsp;
+                    <select id="sub76">
+                        <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                        </select><br><hr>
+                        Subject-7:&nbsp;&nbsp;&nbsp;
+                        <select id="sub77">
+                            <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                            </select><br><hr>
+                            Subject-8:&nbsp;&nbsp;&nbsp;
+                            <select id="sub78">
+                                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                                </select><br><br>
+                                <input type="submit" id="subm">
+</div>
+<div id="eight">
+    <h4>Semester-8</h4>
+    Subject-1:&nbsp;&nbsp;&nbsp;
+                            <select id="sub81">
+                                <option value="10">A+</option>
+    <option value="9">A</option>
+    <option value="8">B</option>
+    <option value="7">C</option>
+    <option value="6">D</option>
+    <option value="5">E</option>
+    <option value="0">F</option>
+                                </select><br><br>
+                                <input type="submit" id="subm"><br>
+        </div>
+    </left>
+    </body>
+</form>
+<div style="position:absolute;top:800px;right:170px;background-color:bisque;border:5px solid black;border-radius:10px;">
+<center><h3><u>CGPA Calculator</u></h3><form>
+    Semester-1 SGPA: <input type="text" id="s1" value="0" class="c">&nbsp;<br><br>
+    Semester-2 SGPA: <input type="text" id="s2" value="0" class="c">&nbsp;<br><br>
+    Semester-3 SGPA: <input type="text" id="s3" value="0" class="c">&nbsp;<br><br>
+    Semester-4 SGPA: <input type="text" id="s4" value="0" class="c">&nbsp;<br><br>
+    Semester-5 SGPA: <input type="text" id="s5" value="0" class="c">&nbsp;<br><br>
+    Semester-6 SGPA: <input type="text" id="s6" value="0" class="c">&nbsp;<br><br>
+    Semester-7 SGPA: <input type="text" id="s7" value="0" class="c">&nbsp;<br><br>
+    Semester-8 SGPA: <input type="text" id="s8" value="0" class="c">&nbsp;<br><br>
+    <center><input type="submit" id="subm" onclick="cgpa()"></center></form></center>
+</div>
+<div id="count">
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=17640386&style=0006&nbdigits=9&type=ip&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>       
+    <script>
+        var v;
+        document.getElementById('sem').onchange=function om(){
+            v=parseInt(document.getElementById('sem').value);
+            if(v==1){
+                document.getElementById('one').style.display='block';
+            }
+            else{
+                document.getElementById('one').style.display='none';
+            }
+            if(v==2) {
+                document.getElementById('two').style.display = 'block';
+            }
+            else{
+                document.getElementById('two').style.display='none';
+            }
+            if(v==3){
+                document.getElementById('three').style.display='block';
+            }
+            else{
+                document.getElementById('three').style.display='none';
+            }
+            if(v==4){
+                document.getElementById('four').style.display='block';
+            }
+            else{
+                document.getElementById('four').style.display='none';
+            }
+            if(v==5){
+                document.getElementById('five').style.display='block';
+            }
+            else{
+                document.getElementById('five').style.display='none';
+            }
+            if(v==6){
+                document.getElementById('six').style.display='block';
+            }
+            else{
+                document.getElementById('six').style.display='none';
+            }
+            if(v==7){
+                document.getElementById('seven').style.display='block';
+            }
+            else{
+                document.getElementById('seven').style.display='none';
+            }
+            if(v==8){
+                document.getElementById('eight').style.display='block';
+            }
+            else{
+                document.getElementById('eight').style.display='none';
+            }
+        }
+        function cal(){
+                var sgpa=0;
+                if(v==1){
+                    var a=new Array(3,3,3,3,1.5,1.5,3,1.5);
+                    var total=19.5;
+                }
+                else if(v==2){
+                    var a=new Array(3,3,3,3,2,1.5,1,1.5,1.5);
+                    var total=19.5;
+                }
+                else if(v==3){
+                    var a=new Array(3,3,3,3,3,1.5,1.5,1.5,2);
+                    var total=21.5;
+                }
+                else if(v==4){
+                    var a=new Array(3,3,3,3,3,1.5,1.5,1.5,2);
+                    var total=21.5;
+                }
+                else if(v==5){
+                    var a=new Array(3,3,3,3,3,1.5,1.5,1.5,2);
+                    var total=21.5;
+                }
+                else if(v==6){
+                    var a=new Array(3,3,3,3,3,1.5,1.5,1.5,2);
+                    var total=21.5;
+                }
+                else if(v==7){
+                    var a=new Array(3,3,3,3,3,3,3,2);
+                    var total=23;
+                }
+                else if(v==8){
+                    var a=new Array(12,0);
+                    var total=12;
+                }
+                for(var i=1;i<=a.length;i++){
+                    s='sub'+v+i;
+                    var subSelect = document.getElementById(s);
+                    sgpa+=parseInt(subSelect.value)*a[i-1];
+                    if(v==8){
+                       break;
+                    }
+                }
+                window.alert("Your SGPA is "+Math.round((sgpa/total)*100)/100);
+            }
+            function cgpa(){
+                var d="s";
+                var i;
+                var f=0;
+                var cgp=0;
+                for(i=1;i<=8;i++)
+                {
+                    d="s";
+                    d+=i;
+                    f=parseFloat(document.getElementById(d).value);
+                    if(f<11 && f>=0){
+                    if(f==0 && i==1){
+                    cgp=0;
+                    i=2;
+                    break;
+                    }
+                    if(f==0)
+                    break;
+                    cgp+=f;
+                    }
+                    else{
+                        cgp=0;
+                        i=2;
+                        break;
+                    }
+                }
+                window.alert("Your CGPA is "+(cgp/(i-1)));
+            }
+    </script>
+</html>
